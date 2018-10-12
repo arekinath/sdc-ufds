@@ -25,6 +25,15 @@ function SDCKey() {
             fingerprint: 1,
             pkcs: 1
         },
+        optional: {
+            attested: 1,
+            attestation: 0,  /* zero or more */
+
+            /* Specific to attested keys stored in Yubikeys. */
+            ykSerial: 1,
+            ykPinRequired: 1,
+            ykTouchRequired: 1
+        }
         strict: true
     });
 }
